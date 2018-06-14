@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charse=UTF-8">
+		<title>Memorie</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<center>
+			<table>
+				<tr>
+					<td id="0"><img src="fond.jpg"></td>
+					<td id="1"><img src="fond.jpg"></td>
+					<td id="2"><img src="fond.jpg"></td>
+					<td id="3"><img src="fond.jpg"></td>
+				</tr>
+				<tr>
+					<td id="4"><img src="fond.jpg"></td>
+					<td id="5"><img src="fond.jpg"></td>
+					<td id="6"><img src="fond.jpg"></td>
+					<td id="7"><img src="fond.jpg"></td>
+				<tr>
+					<td id="8"><img src="fond.jpg"></td>
+					<td id="9"><img src="fond.jpg"></td>
+					<td id="10"><img src="fond.jpg"></td>
+					<td id="11"><img src="fond.jpg"></td>
+				</tr>
+				<tr>
+					<td id="12"><img src="fond.jpg"></td>
+					<td id="13"><img src="fond.jpg"></td>
+					<td id="14"><img src="fond.jpg"></td>
+					<td id="15"><img src="fond.jpg"></td>
+				</tr>
+				</tr>
+			</table>
+		</center>
+		<script>
+var nrClick=0;
+var first;
+var second;
+var match=0;
+var cards=[];
+
+function control(){
+	clearInterval(timer);
+	nrClick=0;
+	if(cards[first]==cards[second]){
+		match++;
+		if(match==8)
+		{alert("congratulations!!");
+		}
+	}else{
+		var card='#';
+		card+=first;
+		card+=' img'
+		$(card).attr('src','fond.jpg');
+		var card1='#';
+		card1+=second;
+		card1+=' img'
+		$(card1).attr('src','fond.jpg');
+	}
+}
+
+$(document).ready(function(){
+	var arrayUsed=new Array(9);
+	var num=new Array(16);
+	for (var i = 0; i < 9; i++)
+  {
+    arrayUsed[i] = 0;
+  }
+	for (var i = 0; i < 16; i++)
+  {
+    randomNumber = Math.floor(Math.random()*9);
+	console.log(randomNumber);
+    if ((arrayUsed[randomNumber]==0 || arrayUsed[randomNumber]==1) && randomNumber!=0) 
+    {
+      arrayUsed[randomNumber]=arrayUsed[randomNumber]+1;
+	  num[i]=randomNumber;
+    }
+    else
+    {
+      i--;
+    }
+  }
+	for(var i=0;i<16;i++){
+		cards[i]="c"+num[i]+".jpg";
+		console.log(cards[i]);
+	}
+	$('td').on('click',function(){
+		if(nrClick==0)
+	{
+		var card='#';
+		card+=this.id;
+		card+=' img'
+		first=parseInt(this.id);
+		$(card).attr('src',cards[this.id]);
+		nrClick=1;
+	}
+	else if(nrClick==1)
+	{
+		var card='#';
+		card+=this.id;
+		card+=' img'
+		nrClick=2;
+		second=parseInt(this.id);
+		$(card).attr('src',cards[this.id]);
+		timer=setInterval(control,500);
+	}
+	else{
+		alert("you can click on an image once!!1");
+	}
+	});
+});
+		</script>
+	</body>
+</html>
