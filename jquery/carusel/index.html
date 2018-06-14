@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+li{display:none;}
+img{
+	height:400px;
+	width:400px;
+}
+ol{
+	position:relative;
+	text-align:center;
+}
+p{
+	position:absolute;
+	bottom:100px;
+	left:600px;
+	color:red;
+}
+</style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div class="slideshow-container">
+
+		<ol>
+		
+			<li class="mySlides" ><a href="https://www.magnolia.ro/flori-online-buchete-de-flori/" title="Buchet cu trandafiri si gypsophila" target="_blank"><img src="f1.jpg"><p>Buchet cu trandafiri si gypsophila</p></a></li>
+			<li class="mySlides" ><a href="http://www.101flori.ro/flori-mix/1031-buchet-flori-galbene.html" title="Buchet mix cu flori galbene"><img  src="f2.jpg" target="_blank"><p>Buchet mix cu flori galbene</p></a></li>
+			<li class="mySlides"><a href="http://www.livrarefloribucuresti.ro/flori/ce-facem-cu-florile-noastre-cand-plecam-in-vacanta.html" title="Reguli generale de ingrijire a plantelor" target="_blank"><img  src="f3.jpg"  ><p>Reguli generale de ingrijire a plantelor</p></a></li>
+			<li class="mySlides" ><a href="http://www.florarienonstop.ro/cutii-cu-flori/282-cutie-cu-mix-de-flori.html" title="Mix de flori"><img  src="f4.jpg" target="_blank"  alt="poza public"><p>Mix de flori</p></a></li>
+		</ol>
+<center>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</center>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  if (slideIndex > $('.mySlides').length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = $('.mySlides').length}
+  $('.mySlides').each(function(i, obj) {
+		$(this).hide();
+});   
+    for (i = 0; i < $('.dot').length; i++) {
+        $('.dot').each(function(i, obj) {
+		$(this).addClass("").removeClass(" active");
+});
+    }
+     $('.mySlides').each(function(i, obj) {
+		if($(this).index()==slideIndex-1)
+			$(this).show();
+});
+    
+     $('.dot').each(function(i, obj) {
+		if($(this).index()==slideIndex-1)
+			$(this).addClass(" active");
+			
+});
+}
+
+$(document).ready(function da(){
+    $('.mySlides').each(function(i, obj) {
+		$(this).hide();
+});
+    slideIndex++;
+    if (slideIndex > $('.mySlides').length) {slideIndex = 1}    
+        $('.dot').each(function(i, obj) {
+		$(this).addClass("").removeClass(" active");
+		});
+     $('.mySlides').each(function(i, obj) {
+		if($(this).index()==slideIndex-1)
+			$(this).show();
+});
+    
+     $('.dot').each(function(i, obj) {
+		
+		if($(this).index()==slideIndex-1)
+			$(this).addClass(" active");
+			
+});
+	setTimeout(da,4000);
+});
+</script>
+</body>
+</html>
