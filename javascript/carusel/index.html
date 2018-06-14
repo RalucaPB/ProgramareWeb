@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charse=UTF-8">
+		<title>Carusel</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		
+	</head>
+	<body>
+		<ol >
+			<li  class="mySlides"><a href="https://www.magnolia.ro/flori-online-buchete-de-flori/" title="Buchet cu trandafiri si gypsophila" target="_blank"><img src="f1.jpg" ><p>Buchet cu trandafiri si gypsophila</p></a></li>
+			<li class="mySlides"><a href="http://www.101flori.ro/flori-mix/1031-buchet-flori-galbene.html" title="Buchet mix cu flori galbene"><img  src="f2.jpg" target="_blank"><p>Buchet mix cu flori galbene</p></a></li>
+			<li class="mySlides"><a href="http://www.livrarefloribucuresti.ro/flori/ce-facem-cu-florile-noastre-cand-plecam-in-vacanta.html" title="Reguli generale de ingrijire a plantelor" target="_blank"><img  src="f3.jpg" ><p>Reguli generale de ingrijire a plantelor</p></a></li>
+			<li class="mySlides"><a href="http://www.florarienonstop.ro/cutii-cu-flori/282-cutie-cu-mix-de-flori.html" title="Mix de flori"><img  src="f4.jpg" target="_blank"><p>Mix de flori</p></a></li>
+
+			<button class="left" onclick="plusDivs(-1)">&#10094;</button>
+			<button class="right" onclick="plusDivs(1)">&#10095;</button>
+		</ol>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+var myIndex = 1;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 10000);
+}
+</script>
+
+</body>
+</html>
