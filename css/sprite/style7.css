@@ -1,0 +1,82 @@
+/* 1 sprite has 200x188*/
+ul{
+	position:relative;
+	margin:auto;
+	width:400px;
+	height:auto;
+	display: -webkit-flex; 
+    display: flex;
+}
+
+li{
+	width:200px;
+	height:188px;
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	left: 0;
+}
+
+#Dog
+{
+	top:0px;
+	background: url(spriteAnimals.png) 0 0px;
+}
+
+#Wolf
+{
+	top:250px;
+	background: url(spriteAnimals.png) 0  -188px;
+}
+
+#Pig{
+	top:500px;
+	background: url(spriteAnimals.png) 0 -376px;
+}
+
+#Bee{
+	top:750px;
+	background: url(spriteAnimals.png) 400px 0;
+}
+
+
+		.comment-box
+		{
+			/*margin: 200px;*/
+			top: 60px;
+			left:210px;
+			position: relative;
+                        width:max-content;
+			max-width:500px;
+			max-height: 200px;
+			border: 1px ;
+			border-radius: 6px; 
+			-moz-border-radius: 6px;
+			-webkit-border-radius: 6px;
+			display: inline-block;
+			background: #00aabb;
+		}
+		.comment-box p 
+		{
+		padding 0 10px;
+		}
+		
+.comment-box:before{
+    content:"";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    top: 50%;
+    left: 0px; /* 1px buffer for zooming problems while rendering*/
+    /*border-width: 15px;
+    border-color: transparent grey transparent transparent;
+    border-style: solid;*/
+    border: 35px solid transparent;
+	border-right-color: #00aabb;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -17.5px;
+	margin-left: -35px;
+}
