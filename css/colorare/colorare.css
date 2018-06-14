@@ -1,0 +1,90 @@
+ul {
+    position: relative;
+}
+li{
+	width: 84px;
+	height: 84px;
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	left: 0;
+
+}
+#facebook {
+	top:0px;
+	background: url(css-pr4.png) 0 -84px;
+}
+#facebook:hover{
+	background: url(css-pr4.png) 0 0;}
+
+#oo {
+	top: 84px;
+	background: url(css-pr4.png) -84px -84px;
+}
+#oo:hover{
+	background: url(css-pr4.png) -84px 0;}
+
+#o {
+	top: 168px;
+	background: url(css-pr4.png) -168px -84px;
+}
+#o:hover{
+	background: url(css-pr4.png) -168px 0;}
+
+#gplus {
+	top: 252px;
+	background: url(css-pr4.png) -252px -84px;
+}
+#gplus:hover{
+	background: url(css-pr4.png) -252px 0;}
+
+#linkedin {
+	top: 336px;
+	background: url(css-pr4.png) -336px -84px;
+}
+#linkedin:hover{
+	background: url(css-pr4.png) -336px 0;}
+
+#pinterest {
+	top: 420px;
+	background: url(css-pr4.png) -420px -84px;
+}
+#pinterest:hover{
+	background: url(css-pr4.png) -420px 0;}
+
+#spotify {
+	top: 504px;
+	background: url(css-pr4.png) -504px -84px;
+}
+#spotify:hover{
+	background: url(css-pr4.png) -504px 0;}
+
+#skype {
+	top: 588px;
+	background: url(css-pr4.png) -588px -84px;
+}
+#skype:hover{
+	background: url(css-pr4.png) -588px 0;}
+
+#twiter {
+	top: 672px;
+	background: url(css-pr4.png) -672px -84px;
+}
+#twiter:hover{
+	background: url(css-pr4.png) -672px 0;}
+
+#vimeo {
+	top: 756px;
+	background: url(css-pr4.png) -756px -84px;
+}
+#vimeo:hover{
+	background: url(css-pr4.png) -756px 0;}
+
+#youtube {
+	top: 840px;
+	background: url(css-pr4.png) -840px -84px;
+}
+#youtube:hover{
+	background: url(css-pr4.png) -840px 0;}
