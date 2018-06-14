@@ -1,0 +1,15 @@
+.mySlides{display:none;}
+img{
+	height:400px;
+	width:400px;
+}
+ol{
+	position:relative;
+	text-align:center;
+}
+p{
+	position:absolute;
+	bottom:100px;
+	left:600px;
+	color:red;
+}
