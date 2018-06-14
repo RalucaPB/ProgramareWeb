@@ -1,0 +1,36 @@
+h1 {
+	display: inline-block;
+	width: 120px;
+}
+
+#nameinput, #cnpinput {
+	box-sizing: border-box;
+	background-image: url("square.png");
+	background-size: 25px;
+	height: 25px;
+	padding-left: 7px;
+	display: inline-block;
+}
+
+#nameinput {
+	width: 500px;
+}
+
+#cnpinput {
+	width: 325px;
+}
+
+input {
+	background: none;
+ 	display: block;
+ 	width: inherit;
+  	padding: 3px 0 0;
+  	border: none;
+  	font-family: monospace;
+  	font-size: 20px;
+  	letter-spacing: 14px;
+}
+
+input:focus {
+	outline: none;
+}
