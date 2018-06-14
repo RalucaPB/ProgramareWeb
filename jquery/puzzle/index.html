@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Puzzle</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<style>
+		canvas {
+			width:800px;
+			height:800px;
+			border: 5px solid black;
+			margin:auto
+		}
+
+		</style>
+	</head>
+	<body>
+		<div style="margin-top:10px; height:1000px;">
+			<div>
+				<div style="width:50%; float:left; display:inline">
+					<div style="text-align:center; height:30px">
+						<h1 id="message"></h1>
+					</div>
+					<div style="text-align:center; height:30px">
+							<h1 id="moves"></h1>
+					</div> 
+						
+					<canvas id="canvas" height="800px" width="800px"></canvas>
+				</div>
+			</div>
+		<div style="width:50%; float:left; display:inline">
+			
+			<div style="display:none">
+				<img src="p1.jpg" id="puzz1" width="265" height="265">
+				<img src="p2.jpg" id="puzz2" width="265" height="265">
+				<img src="p3.jpg" id="puzz3" width="265" height="265">
+			</div>
+			<div style="display:none">
+				<img src="p4.jpg" id="puzz4" width="265" height="265">
+				<img src="p5.jpg" id="puzz5" width="265" height="265">
+				<img src="p6.jpg" id="puzz6" width="265" height="265">
+			</div>
+			<div style="display:none">
+				<img src="p7.jpg" id="puzz7" width="265" height="265">
+				<img src="p8.jpg" id="puzz8" width="265" height="265">
+				<img src="p9.jpg" id="puzz9" width="265" height="265">
+			</div>
+		</div>
+		<script>
+		var cards=[];
+$(document).ready(function(){
+	var arrayUsed=new Array(10);
+	var num=new Array(10);
+	for (var i = 1; i < 10; i++)
+  {
+    arrayUsed[i] = 0;
+  }
+	for (var i = 1; i < 10; i++)
+  {
+    randomNumber = Math.floor(Math.random()*10);
+	console.log(randomNumber);
+    if ((arrayUsed[randomNumber]==0) && randomNumber!=0) 
+    {
+      arrayUsed[randomNumber]=arrayUsed[randomNumber]+1;
+	  num[i]=randomNumber;
+    }
+    else
+    {
+      i--;
+    }
+  }
+	for(var i=1;i<10;i++){
+		cards[i]="p"+num[i]+".jpg";
+		console.log(cards[i]);
+	}
+	
+});
+		</script>
+	</body>
+</html>
